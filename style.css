@@ -1,0 +1,124 @@
+*{
+    padding:0;
+    margin:0;
+}
+
+.wrapper{
+    position: relative;
+    transition: transform 1s ease;
+    overflow: hidden;
+}
+
+.row{
+    position:relative;
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+.nav{
+    position: fixed;
+    width:80px;
+    height: 160px; 
+    margin-top: -80px;
+    top:50%;
+    left:30px;
+    z-index:20000;
+}
+
+.dots{
+    cursor: pointer;
+    width:15px;
+    height:15px;
+    margin-top:20px;
+    border-radius: 18px;
+    box-shadow:0 0 15px rgba(0,0,0,0.5);
+    background: rgba(255,255,255,0.5);
+    transition:.5s;
+}
+
+
+.dots:hover{
+
+    transform: scale(2);
+    transition:.5s;
+}
+
+.dots:hover span{
+    visibility: visible;
+    transition: .5s;
+}
+
+.row h1{
+    font-family: sans-serif;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    font-size:85px;
+    color:#fff;
+}
+
+.dots span{
+    visibility: hidden;
+    width: 60px;
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+    text-align: center;
+    border-radius: 0px 2px 2px 2px;
+    font-size: 8px;
+    position: absolute;
+    z-index: -1;
+    left:20px;
+    top:-2px;
+    padding: 3px 0;
+    font-family: sans-serif;
+    transition: .5s;
+}
+
+.dots span:after{
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: 99.7%;
+    margin-top: -5px;
+    border-width: 2px;
+    border-top-width: 3px;
+    border-right-width: 3px;
+    border-bottom-width: 3px;
+    border-left-width: 3px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-top-color: transparent;
+    border-right-color: rgba(0,0,0,0.5);
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+}
+
+.cursor{
+    background: #ccc;
+}
+
+
+
+@media (max-width:1200px){
+
+    .row h1{
+        font-size:65px;
+    }
+}
+
+@media (max-width:768px){
+
+    .row h1{
+        font-size:45px;
+    }
+}
+
+@media (max-width:480px){
+
+    .row h1{
+        font-size:35px;
+    }
+}

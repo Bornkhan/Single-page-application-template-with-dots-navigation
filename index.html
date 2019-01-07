@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css"/>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            $(".nav .dots").click(function() {
+        var index = $(".nav .dots").index(this);
+        $('html, body').animate({
+        scrollTop: $(".row:nth-child("+(index+1)+")").offset().top
+    }, 1000);
+    });
+            
+        });
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="row" style="background-color:#f6e58d;">
+            <h1>SECTION 1</h1>
+        </div>
+        <div class="row" style="background-color:#ffbe76;">
+            <h1>SECTION 2</h1>
+        </div>
+        <div class="row" style="background-color:#ff7979;">
+            <h1>SECTION 3</h1>
+        </div>
+        <div class="row" style="background-color:#badc58;">
+            <h1>SECTION 4</h1>
+        </div>
+        <div class="row" style="background-color:#dff9fb;">
+            <h1>SECTION 5</h1>
+        </div>
+    </div>
+
+    <div class="nav">
+        <div class="dots"><span>Section One</span></div>
+        <div class="dots"><span>Section Two</span></div>
+        <div class="dots"><span>Section Three</span></div>
+        <div class="dots"><span>Section Four</span></div>
+        <div class="dots"><span>Section Five</span></div>
+</body>
+</html>
